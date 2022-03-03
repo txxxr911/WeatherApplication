@@ -26,11 +26,14 @@ class AppDelegate: AppDelegateManager {
         // Setup Services
         container.apply(AppConfigServiceAssembly.self)
         container.apply(EnvironmentServiceAssembly.self)
+        container.apply(GetCoordinatesServiceAssembly.self)
+        container.apply(GetWeatherDataServiceAssembly.self)
+        container.apply(DataStorageServiceAssembly.self)
         
         
         return container
     }()
-    
+
     override var services: [AppDelegateService] {
         return [
             ApplicationService(container: container, window: window)

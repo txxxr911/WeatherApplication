@@ -10,7 +10,7 @@ import Foundation
 
 class MainPresenter: BasePresenter<MainInteractorInput, MainRouterProtocol>, MainModuleOutput {
     // MARK: - Weak properties
-    weak var view: MainViewInput?
+    weak var view: WeatherView?
 }
 
 // MARK: Private
@@ -26,6 +26,7 @@ extension MainPresenter: MainModuleInput {
 // MARK: View Output
 extension MainPresenter: MainViewOutput {
     func viewDidLoad() {
-        view?.set(title: "Main")
+        //view?.set(title: "Main")
+        view?.haha()
     }
 }

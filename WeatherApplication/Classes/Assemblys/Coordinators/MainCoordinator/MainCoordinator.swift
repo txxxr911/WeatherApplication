@@ -12,6 +12,7 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorType {
     
     override func start() {
         let module = container.resolve(MainAssembly.self).build(coordinator: self)
+        print("Set main router")
         router.setRootModule(module)
     }
     
